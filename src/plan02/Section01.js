@@ -22,7 +22,7 @@ function Section01() {
         <Typography variant="lead" color='white' className='my-5'>不限國籍、年齡、居住地，凡對「嘉義市影視故事」主題有興趣者，皆可報名。</Typography>
 
         <Typography variant="h3" color="white" className='mt-16'>報名方式</Typography>
-        <Typography variant="lead" color='white' className='my-5  '>1.一律採網路報名，請至<a href='https://google.com'  target="_blank" className='text-amber-400 hover:text-amber-200  '>【文字故事徵件】 </a> 並詳閱 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/文字故事徵件活動-注意事項.pdf'} className='text-amber-400 hover:text-amber-200 '> 【注意事項】</a>。</Typography>
+        <Typography variant="lead" color='white' className='my-5  '>1.一律採網路報名，請至<a href='https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform'  target="_blank" className='text-amber-400 hover:text-amber-200  '>【文字故事徵件】 </a> 並詳閱 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/文字故事徵件活動-注意事項.pdf'} className='text-amber-400 hover:text-amber-200 '> 【注意事項】</a>。</Typography>
         <Typography variant="lead" color='white' className='my-5'>2.僅限以個人名義報名，為鼓勵更多創作故事，同一人可以重複投件不同內容(不得一稿多投)，但僅可獲獎乙次，取最高名次獲獎。不得以公司行號或機構團體名義報名。</Typography>
         <Typography variant="lead" color='white' className='my-5'>3.故事內容不拘，唯不可有違反善良風俗之內容。</Typography>
         <Typography variant="lead" color='white' className='my-5'>4.皆需以繁體中文填寫相關內容。</Typography>

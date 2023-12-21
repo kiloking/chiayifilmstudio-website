@@ -22,10 +22,10 @@ function Section01() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   const qaitems=[
     {id:1,q:"課程真的全程免費嗎?",a:"是的，全程免費。課程若需要一個收費標準，價值將超過萬元!!因此誠摯邀請您把握可貴的機會!!"},
-    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://google.com' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.08(五) 以電子信件各別通知正式學員。"},
+    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.08(五) 以電子信件各別通知正式學員。"},
     {id:3,q:"「入門班」和「進階班」的差別?",a:"入門班: 將著重從「0」開始學習，從攝影的鏡頭語言、數位知識、田野調查、劇本創作、實務拍攝、後製操作等，循序漸進地誕生屬於自己的第一個作品。<br/><br/>進階班: 針對已具有基本故事內容與前、後期製作能力，課程強調在於如何讓作品更進一步被完善再到被看見、如何提案和行銷作品本身、及運用學習新興科技如VR(虛擬實境)或國際合製等。簡言之，只要您過去已經嘗試過拍攝並想更進一步完善作品，進階班較為合適。"},
     {id:4,q:"入門班，真的完全沒有基礎也可以報名嗎?",a:"是的。我們熱烈歡迎只要對影視具有熱情的民眾報名。透過系列課程將帶領您從入門一步步學習到實作，基礎的理論知識必然存在，但課程設計將更著重於實務。<br/><br/>人才培育計畫並不是一個培養會考試的補習班，而是一個期許能孵化出更多動人影視故事的場域。不用很厲害才可以開始，而是開始了才會變厲害!"},
-    {id:5,q:"報名徵選有限制嗎，怎樣才能夠脫穎而出?",a:"只要符合報名資格即可。因此不論您是學生、社群小編、行銷企劃、影像工作者、演員、經營各行各業的店家想透過影像的方式增加曝光，或是活到老學到老的年長者等，只要對用影視說故事有熱情及想法，都歡迎報名!!<br/><br/>本計畫徵選透過 <a href='https://google.com' target='_blank' class='text-amber-400 hover:text-amber-200 '> 報名表單 </a>的各項問題進行審查，因此您的回答將是評審判斷的唯一依據，因此建議填寫完整，並盡可能完善加分項題目。"},
+    {id:5,q:"報名徵選有限制嗎，怎樣才能夠脫穎而出?",a:"只要符合報名資格即可。因此不論您是學生、社群小編、行銷企劃、影像工作者、演員、經營各行各業的店家想透過影像的方式增加曝光，或是活到老學到老的年長者等，只要對用影視說故事有熱情及想法，都歡迎報名!!<br/><br/>本計畫徵選透過 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' target='_blank' class='text-amber-400 hover:text-amber-200 '> 報名表單 </a>的各項問題進行審查，因此您的回答將是評審判斷的唯一依據，因此建議填寫完整，並盡可能完善加分項題目。"},
     {id:6,q:"可以一次報名兩班嗎?",a:"可以。本單位保留不足額錄取及增額錄取之權利。"},
     {id:7,q:"課程的影視類型，有特別限制在哪一塊領域嗎?",a:"課程的設計，不限劇情片、紀錄片、微電影、影音短片、MV等。講師也來自多元的領域，即便與您現今拍攝的影片類型不盡相同，反倒相信也能在多元的課程中獲得意想不到的收穫。"},
     {id:8,q:"擔心課程跟不上，怎麼辦?",a:"嘉義市影視音基地，會將每堂課程全程錄影，歡迎學員可以蒞臨基地複習觀看。此外，每位學員都將搭配常態導師陪伴，並也有課程外的業師諮詢輔導的資源，再者，本基地亦提供基本攝影設備與剪輯軟體供學員免費優先使用。"},
@@ -76,7 +76,7 @@ function Section01() {
         <Typography variant="lead" color='white' className='my-5'>3. 基本的電腦操作能力</Typography>
 
         <Typography variant="h3" color="white" className='mt-16'>報名方式</Typography>
-        <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>一律採<a href="https://google.com"  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center gap-1'>網路報名 <FaShareFromSquare /></a></Typography>
+        <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>一律採<a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center gap-1'>網路報名 <FaShareFromSquare /></a></Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>報名時間</Typography>
         <Typography variant="lead" color='white' className='my-10'>即日起至2024.02.25(日) 下午17:00截止</Typography>

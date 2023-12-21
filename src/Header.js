@@ -13,10 +13,10 @@ function Header() {
           <div className="flex h-1/2 ">
             <div className=' items-center text-white text-xs bg-red-400 rounded-lg py-1 px-2 gap-1 bounce hidden md:flex '>儘速報名 <FaAnglesRight /></div>
           </div>
-          <a href="https://google.com"  target="_blank" >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" >
             <Button to="/" size="md" className={`text-base  text-black flex  items-center gap-1 bg-[#dfe103] `}>影視人才培育 </Button>
           </a>
-          <a href="https://google.com"  target="_blank" >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform"  target="_blank" >
             <Button to="/plan2" size="md" className={`text-base  text-black flex  items-center gap-1  bg-[#ffbe99] `}>文字故事徵件 </Button>
           </a>
           
