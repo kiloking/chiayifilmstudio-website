@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from './Footer';
 import Plan01Section from "./plan01/Section01";
 import Plan02Section from "./plan02/Section01"
+import BottomLinkGroup from './Components/BottomLinkGroup';
 import ScrollToTopButton from './Components/ScrollToTopButton';
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Plan01Section />
       <Plan02Section />
+      <BottomLinkGroup />
       <Footer />
       <ScrollToTopButton />
     </BrowserRouter>
