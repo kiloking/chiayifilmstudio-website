@@ -14,10 +14,10 @@ function Header() {
             <div className=' items-center text-white text-xs bg-gradient-to-r from-[#51c3f1] to-[#f77f58]  rounded-lg py-1 px-2 gap-1 bounce hidden md:flex '>儘速報名 <FaAnglesRight /></div>
           </div>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" rel="noreferrer" >
-            <Button to="/" size="md" className={`text-base  text-white flex  items-center gap-1 bg-[#0e1935] hover:text-yellow-500 `}>影視人才培育 <FaShareFromSquare /></Button>
+            <Button to="/" size="md" className={`text-base  text-white flex  items-center gap-1 bg-[#0e1935] hover:text-yellow-100 `}>影視人才培育 <FaShareFromSquare /></Button>
           </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform"  target="_blank" rel="noreferrer" >
-            <Button to="/plan2" size="md" className={`text-base  text-white flex  items-center gap-1  bg-[#0e1935] hover:text-yellow-500`}>文字故事徵件 <FaShareFromSquare /></Button>
+            <Button to="/plan2" size="md" className={`text-base  text-white flex  items-center gap-1  bg-[#0e1935] hover:text-yellow-100`}>文字故事徵件 <FaShareFromSquare /></Button>
           </a>
           
         </div>
