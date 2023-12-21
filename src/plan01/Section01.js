@@ -82,7 +82,7 @@ function Section01() {
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>一律採<a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center gap-1'>網路報名 <FaShareFromSquare /></a></Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>報名時間</Typography>
-        <Typography variant="lead" color='white' className='my-10'>即日起至2024.02.25(日) 下午17:00截止</Typography>
+        <Typography variant="lead" color='white' className='my-10'>即日起至2024.03.03(日) 下午17:00截止</Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>課程表與師資</Typography>
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表日期與內容師資.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
