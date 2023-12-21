@@ -17,14 +17,19 @@ function Section01() {
         </Typography>
         <Typography variant="h3"  color="white" className='mt-16'>計畫主旨</Typography>
         <Typography variant="lead" color='white' className='my-10'>
-          推廣與促進嘉義市行銷與發展城市魅力，以嘉義市為主要故事場景或故事內容，發掘更多在地的紀錄故事或產製微電影、劇情短片等，只需透過<span className='text-[#ffbe99] font-bold'>【1000字內】</span>的<span className='text-[#ffbe99] font-bold'>【文字故事】</span>內容進行投稿，故事內容必須至少含有30%嘉義市的元素，影片類型不限，舉凡:紀錄片、劇情片、動畫片、舞台藝術片、音樂歌舞片、VR短片等均可，但文字故事內容需要有實際轉製成為影片的可行性!  
+          推廣與促進嘉義市行銷與發展城市魅力，以嘉義市為主要故事場景或故事內容，發掘更多在地的紀錄故事或產製微電影、劇情短片等，只需透過<span className='text-amber-400 font-bold'>【1000字內】</span>的<span className='text-amber-400 font-bold'>【文字故事】</span>內容進行投稿，故事內容必須至少含有30%嘉義市的元素，影片類型不限，舉凡:紀錄片、劇情片、動畫片、舞台藝術片、音樂歌舞片、VR短片等均可，但文字故事內容需要有實際轉製成為影片的可行性!  
         </Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>報名資格</Typography>
         <Typography variant="lead" color='white' className='my-5'>不限任何條件，凡對「嘉義市影視故事」主題有興趣者，皆可報名。</Typography>
 
         <Typography variant="h3" color="white" className='mt-16'>報名方式</Typography>
-        <Typography variant="lead" color='white' className='my-5  '>1.一律採網路報名，請詳閱<a href={process.env.PUBLIC_URL+'images/投件須知-文字故事徵件活動.pdf'} rel='noreferrer'  target="_blank" className='text-amber-400 hover:text-amber-200  '>【投件須知】 </a> 並線上報名 <a target="_blank"  href='https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform' className='text-amber-400 hover:text-amber-200 '> 【文字故事徵件】</a>。</Typography>
+        <Typography variant="lead" color='white' className='my-5  '>
+          <span className='flex  whitespace-nowrap '> <span className='  '>1.一律採網路報名，請詳閱</span> <a href={process.env.PUBLIC_URL+'images/投件須知-文字故事徵件活動.pdf'} rel='noreferrer'  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center '>【投件須知】 <span><FaFile /></span> </a></span>
+          <span className='flex'>線上報名 <a target="_blank"  href='https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform' className='text-amber-400 hover:text-amber-200   '> 
+            <div className='flex items-center'>【文字故事徵件】<FaShareFromSquare /></div></a>
+          </span>
+        </Typography>
         <Typography variant="lead" color='white' className='my-5'>2.僅限以個人名義報名，為鼓勵更多創作故事，同一人可以重複投件不同內容(不得一稿多投)，但僅可獲獎乙次，取最高名次獲獎。不得以公司行號或機構團體名義報名。</Typography>
         <Typography variant="lead" color='white' className='my-5'>3.故事內容不拘，唯不可有違反善良風俗之內容。</Typography>
         <Typography variant="lead" color='white' className='my-5'>4.皆需以繁體中文填寫相關內容。</Typography>
