@@ -5,7 +5,7 @@ function BottomLinkGroup() {
     <div className='w-full flex items-center '>
       <a 
         href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" rel="noreferrer"
-        className='w-1/2 py-10 bg-[#152853]  flex flex-col items-center gap-2 relative group text-white z-0'>
+        className='w-full py-10 bg-[#152853]  flex flex-col items-center gap-2 relative group text-white z-0'>
        
         
         <div className='bg-[#1d426f] rounded-full p-5 relative z-0 overflow-hidden'>
@@ -15,7 +15,7 @@ function BottomLinkGroup() {
         <div className='text-sm'>影視人才培育</div>
         <div className=' absolute top-0 w-full bg-[#1d426f] h-1 group-hover:h-full -z-10 transition-all duration-150 '></div>
       </a>
-      <a 
+      {/* <a 
         href="https://docs.google.com/forms/d/e/1FAIpQLSdvJIt5kMBlps6BHCl6B0A1rBg7h5IUU6BcXSLGuq1vQ_airg/viewform"  target="_blank" rel="noreferrer"
         className='w-1/2 py-10 bg-[#152853]  flex flex-col items-center gap-2 relative group text-white z-0'>
        
@@ -26,7 +26,7 @@ function BottomLinkGroup() {
         </div>
         <div className='text-sm'>文字故事徵件</div>
         <div className=' absolute top-0 w-full bg-[#1d426f] h-1 group-hover:h-full -z-10 transition-all duration-150 '></div>
-      </a>
+      </a> */}
     </div>
   )
 }

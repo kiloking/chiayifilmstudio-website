@@ -10,6 +10,7 @@ import {
   AccordionBody,
  } from "@material-tailwind/react";
  import { FaFile,FaShareFromSquare } from "react-icons/fa6";
+ import Section02 from '../plan02/Section02';
 function Section01() {
   const [open, setOpen] = React.useState(1);
   const scrollToElement = (elementId) => {
@@ -21,8 +22,8 @@ function Section01() {
  
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   const qaitems=[
-    {id:1,q:"課程真的全程免費嗎?",a:"是的，全程免費。課程若需要一個收費標準，價值將超過萬元!!因此誠摯邀請您把握可貴的機會!!"},
-    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.08(五) 以電子信件各別通知正式學員。"},
+    {id:1,q:"課程真的全程免費嗎?",a:"是的，全程免費。課程若需要一個收費標準，價值將超過萬元!!因此誠摯邀請您把握可貴的機會!!<br/><br/>此外，入選者直接享有資金補助，以善影視作品。"},
+    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.16(六) 以電子信件各別通知正式學員。"},
     {id:3,q:"「入門班」和「進階班」的差別?",a:"入門班: 將著重從「0」開始學習，從攝影的鏡頭語言、數位知識、田野調查、劇本創作、實務拍攝、後製操作等，循序漸進地誕生屬於自己的第一個作品。<br/><br/>進階班: 針對已具有基本故事內容與前、後期製作能力，課程強調在於如何讓作品更進一步被完善再到被看見、如何提案和行銷作品本身、及運用學習新興科技如VR(虛擬實境)或國際合製等。簡言之，只要您過去已經嘗試過拍攝並想更進一步完善作品，進階班較為合適。"},
     {id:4,q:"入門班，真的完全沒有基礎也可以報名嗎?",a:"是的。我們熱烈歡迎只要對影視具有熱情的民眾報名。透過系列課程將帶領您從入門一步步學習到實作，基礎的理論知識必然存在，但課程設計將更著重於實務。<br/><br/>人才培育計畫並不是一個培養會考試的補習班，而是一個期許能孵化出更多動人影視故事的場域。不用很厲害才可以開始，而是開始了才會變厲害!"},
     {id:5,q:"報名徵選有限制嗎，怎樣才能夠脫穎而出?",a:"只要符合報名資格即可。因此不論您是學生、社群小編、行銷企劃、影像工作者、演員、經營各行各業的店家想透過影像的方式增加曝光，或是活到老學到老的年長者等，只要對用影視說故事有熱情及想法，都歡迎報名!!<br/><br/>本計畫徵選透過 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 報名表單 </a>的各項問題進行審查，因此您的回答將是評審判斷的唯一依據，因此建議填寫完整，並盡可能完善加分項題目。"},
@@ -37,12 +38,12 @@ function Section01() {
 
       <div className='relative pt-[56%] -z-0 brightness-'>
         <ReactPlayer
-          className=' absolute top-0 left-0'
-          url='https://www.youtube.com/watch?v=8q9XOBktNB8'
+          className=' absolute top-0 left-0 '
+          url='https://www.youtube.com/watch?v=9vaPQM3SxGU'
           width='100%'
           height='100%'
           loop
-          muted
+          muted={true}
           playing
           config={{
             youtube: {
@@ -60,17 +61,20 @@ function Section01() {
           <div onClick={() => scrollToElement('p4')} className='border border-white px-2 py-2 rounded-md cursor-pointer'>聯絡方式</div>
         </div> */}
         <Typography variant="h1"  className='text-center my-14 text-[#dfe103] ' id="p1">
-          <img src={process.env.PUBLIC_URL+'/images/plan1.gif'} alt="" />
+          <img src={process.env.PUBLIC_URL+'/images/title-1.png'} alt="" />
         </Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>計畫主旨</Typography>
         <Typography variant="lead" color='white' className='my-10'>
-        【影視人才培育計畫】描述在影視世界尋找無盡可能的旅程! <br /> <br />
-          透過導入影視音小班教學制，課程分成「入門班」和「進階班」，兼具系統性與實務
-          性的課程設計，並藉由網羅全台各地具有實務經驗的業師蒞臨本市進行實體教學，力
-          求每位學員都能與業師產生交集，並聯集琢磨新點子。 <br /> <br />
-          課程完全「免費」外，學員還將享有豐厚的影視相關資源，因此不論您在各行各業，
-          對於想要透過影像說故事有興趣者，都非常歡迎您報名，一同釀造蠢蠢欲動的影視作品。
+        【影視人才培育計畫】在影視世界尋找無盡可能的旅程! <br /> <br />
+          透過導入影視音小班教學制，課程分成「入門班」和「進階班」，兼具系統性與實務性的課程設計，並藉由網羅全台各地具有實務經驗的業師蒞臨本市進行實體教學，力求每位學員都能與業師產生交集，並聯集琢磨新點子。 <br /> <br />
+          課程完全「免費」外，學員還將享有豐厚的影視相關資源，因此不論您在各行各業，對於想要透過影像說故事有興趣者，都非常歡迎您報名，一同釀造蠢蠢欲動的影視作品。
+        </Typography>
+        <Typography variant="lead"  className='my-10 text-blue-200'>
+          #【免費】完整系列課程 <br />
+          # 金馬導演領軍，全業界師資陣容 <br />
+          # 選擇「入門」或「進階」小班教學 <br />
+          # 報名入選者，直接享有資金補助
         </Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>報名資格</Typography>
@@ -78,20 +82,19 @@ function Section01() {
         <Typography variant="lead" color='white' className='my-5'>2. 具備國中學歷以上</Typography>
         <Typography variant="lead" color='white' className='my-5'>3. 基本電腦操作能力</Typography>
 
-        <Typography variant="h3" color="white" className='mt-16'>報名方式</Typography>
+        <Typography variant="h3" color="white" className='mt-16'>報名方式與時間</Typography>
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>一律採<a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center gap-1'>網路報名 <FaShareFromSquare /></a></Typography>
-
-        <Typography variant="h3"  color="white" className='mt-16'>報名時間</Typography>
-        <Typography variant="lead" color='white' className='my-10'>即日起至2024.03.03(日) 下午17:00截止</Typography>
+        <Typography variant="lead" color='white' className='my-10'>即日起至2024.03.10(日) 下午 23:59 截止</Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>課程表與師資</Typography>
-        <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表日期與內容師資.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
+        <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>學員福利</Typography>
         <ul class="list-disc text-white text-lg ml-5">
+          <li className='my-5'>入選者享有資金補助，入門班2,000元整，進階班5,000元整</li>
           <li className='my-5'>結業評選獎金與結業證書</li>
           <li className='my-5'>優先享有業師諮詢的資源</li>
-          <li className='my-5'>優先免費借用攝影設備與後製軟體</li>
+          <li className='my-5'>優先免費借用攝影設備與剪接軟體</li>
           <li className='my-5'>優先免費進駐影視基地辦公空間</li>
         </ul>
 
@@ -99,7 +102,7 @@ function Section01() {
         <Typography variant="lead" color='white' className='my-10'>兩班各招收 10 名學員，5名備取，本單位保留不足額錄取及增額錄取之權利。</Typography>
 
         <Typography variant="h3"  color="white" className='mt-16'>徵選方式</Typography>
-        <Typography variant="lead" color='white' className='my-10'>評審委員由主辦單位聘請國內影視產業相關從業人士或學者進行評審。 <br/> 2024.03.08(五) 將於網站公開及電子信件各別通知入選者。</Typography>
+        <Typography variant="lead" color='white' className='my-10'>評審委員由主辦單位聘請國內影視產業相關從業人士或學者進行評審。 <br/> 2024.03.16(六) 於網站公開及電子信件各別通知入選者。</Typography>
 
 
 
@@ -119,8 +122,9 @@ function Section01() {
             })
           }
         </div>
-
+        <Section02 />
       </div>
+
 
 
     </div>
