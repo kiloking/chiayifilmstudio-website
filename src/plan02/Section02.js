@@ -18,7 +18,7 @@ function Section02() {
       <Button onClick={handleOpen} variant="gradient" color='blue'  className='my-5 flex items-center gap-2 cursor-pointer text-base '> <FaTrainSubway /> 交通方式說明</Button> 
       <div className='flex gap-2'>
         <div className='border-[#42cafe]  w-1/2'>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div className='w-1/2 '>
           <img src={process.env.PUBLIC_URL+'/images/S__42647560.jpg'} alt="" className='w-full object-cover h-full'/>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import ReactPlayer from 'react-player';
 
 import { 
@@ -8,11 +8,18 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
  } from "@material-tailwind/react";
- import { FaFile,FaShareFromSquare } from "react-icons/fa6";
+ import { FaFile,FaShareFromSquare,FaTrainSubway } from "react-icons/fa6";
  import Section02 from '../plan02/Section02';
 function Section01() {
   const [open, setOpen] = React.useState(1);
+  const [openD, setOpenD] = React.useState(false);
+  const handleOpenD = () => setOpenD(!openD);
   const scrollToElement = (elementId) => {
     const element = document.getElementById(elementId);
     if (element) {
@@ -33,6 +40,30 @@ function Section01() {
     {id:9,q:"課程的教學形式為何?",a:"課程將採活潑輕鬆的形式，影視人才培育計畫並沒有考試的壓力，期待講師與學員能雙向互動，共創出更多精彩故事。"},
     {id:10,q:"課程結束後，有什麼收穫?",a:"入門班學員，培養影視相關的知識及業界真正需要的能力，透過系統性的學習可以實際運用到學員當初報名時的目標。<br/><br/>進階班學員，將在作品上加深美學基礎，除了影像技巧提升外，延伸接觸到行銷、募資等面向。<br/><br/>如果你有夢想，你就能做到，別忘了迪士尼的一切，都是由一個夢想和一隻老鼠所開始的。"},
   ]
+  const [currentSection, setCurrentSection] = useState(null);
+  const handleScroll = () => {
+    const sections = document.querySelectorAll('section'); // 获取所有的 section 元素
+  
+    // 遍历每个 section 元素并检查是否到达顶部
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      console.log(rect.top <= 350 )
+      console.log(rect.top < window.innerHeight )
+      console.log(rect.top )
+      console.log(window.innerHeight)
+      if (rect.top <= 350 && rect.top < window.innerHeight) {
+        setCurrentSection(section.id); // 当前 section 到达顶部，更新状态
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <div className='bg-gradient-to-r from-[#152853] to-[#030409] '>
 
@@ -60,11 +91,15 @@ function Section01() {
           <div onClick={() => scrollToElement('p3')} className='border border-white px-2 py-2 rounded-md cursor-pointer'>地點與交通</div>
           <div onClick={() => scrollToElement('p4')} className='border border-white px-2 py-2 rounded-md cursor-pointer'>聯絡方式</div>
         </div> */}
-        <Typography variant="h1"  className='text-center my-14 text-[#dfe103] ' id="p1">
+        <Typography variant="h1"  className='text-center my-16 text-[#dfe103] ' >
           <img src={process.env.PUBLIC_URL+'/images/title-1.png'} alt="" />
         </Typography>
 
-        <Typography variant="h3"  color="white" className='mt-16'>計畫主旨</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p1">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p1' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >計畫主旨</div> 
+          <div className={`${currentSection === 'p1' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-10'>
         【影視人才培育計畫】在影視世界尋找無盡可能的旅程! <br /> <br />
           透過導入影視音小班教學制，課程分成「入門班」和「進階班」，兼具系統性與實務性的課程設計，並藉由網羅全台各地具有實務經驗的業師蒞臨本市進行實體教學，力求每位學員都能與業師產生交集，並聯集琢磨新點子。 <br /> <br />
@@ -77,20 +112,36 @@ function Section01() {
           # 報名入選者，直接享有資金補助
         </Typography>
 
-        <Typography variant="h3"  color="white" className='mt-16'>報名資格</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p2">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p2' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >報名資格</div> 
+          <div className={`${currentSection === 'p2' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-5'>1. 以個人名義報名，不限性別、年齡、居住地等限制</Typography>
         <Typography variant="lead" color='white' className='my-5'>2. 具備國中學歷以上</Typography>
         <Typography variant="lead" color='white' className='my-5'>3. 基本電腦操作能力</Typography>
 
-        <Typography variant="h3" color="white" className='mt-16'>報名方式與時間</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p3">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p3' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >報名方式與時間</div> 
+          <div className={`${currentSection === 'p3' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>一律採<a href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"  target="_blank" className='text-amber-400 hover:text-amber-200 flex items-center gap-1'>網路報名 <FaShareFromSquare /></a></Typography>
         <Typography variant="lead" color='white' className='my-10'>即日起至2024.03.10(日) 下午 23:59 截止</Typography>
 
-        <Typography variant="h3"  color="white" className='mt-16'>課程表與師資</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p4">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p4' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >課程表與師資</div> 
+          <div className={`${currentSection === 'p4' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
 
-        <Typography variant="h3"  color="white" className='mt-16'>學員福利</Typography>
-        <ul class="list-disc text-white text-lg ml-5">
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p5">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p5' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >學員福利</div> 
+          <div className={`${currentSection === 'p5' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
+        <ul className="list-disc text-white text-lg ml-5">
           <li className='my-5'>入選者享有資金補助，入門班2,000元整，進階班5,000元整</li>
           <li className='my-5'>結業評選獎金與結業證書</li>
           <li className='my-5'>優先享有業師諮詢的資源</li>
@@ -98,16 +149,28 @@ function Section01() {
           <li className='my-5'>優先免費進駐影視基地辦公空間</li>
         </ul>
 
-        <Typography variant="h3"  color="white" className='mt-16'>招生名額</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p6">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p6' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >招生名額</div> 
+          <div className={`${currentSection === 'p6' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-10'>兩班各招收 10 名學員，5名備取，本單位保留不足額錄取及增額錄取之權利。</Typography>
 
-        <Typography variant="h3"  color="white" className='mt-16'>徵選方式</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p7">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p7' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >徵選方式</div> 
+          <div className={`${currentSection === 'p7' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <Typography variant="lead" color='white' className='my-10'>評審委員由主辦單位聘請國內影視產業相關從業人士或學者進行評審。 <br/> 2024.03.16(六) 於網站公開及電子信件各別通知入選者。</Typography>
 
 
 
 
-        <Typography variant="h3"  color="white" className='mt-16'>常見Q&A</Typography>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p8">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p8' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >常見Q&A</div> 
+          <div className={`${currentSection === 'p8' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
         <div className='mt-10 py-10'>
           {
             qaitems.map((item,index)=>{
@@ -122,7 +185,49 @@ function Section01() {
             })
           }
         </div>
-        <Section02 />
+
+        <div className='taffic pb-12' >
+          <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p9">
+            <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+            <div className={`${currentSection === 'p9' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >地點與交通</div> 
+            <div className={`${currentSection === 'p9' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+          </section>
+          <Typography variant="lead" color='white' className='my-10'>嘉義市影視音基地 <br /> 地址:嘉義市西區北安路74-80號 (舊菸葉廠)</Typography>
+          <Button onClick={handleOpenD} variant="gradient" color='blue'  className='my-5 flex items-center gap-2 cursor-pointer text-base '> <FaTrainSubway /> 交通方式說明</Button> 
+          <div className='flex gap-2'>
+            <div className='border-[#42cafe]  w-1/2'>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div className='w-1/2 '>
+              <img src={process.env.PUBLIC_URL+'/images/S__42647560.jpg'} alt="" className='w-full object-cover h-full'/>
+            </div>
+          </div>
+          
+
+          <Dialog open={openD} handler={handleOpenD} className='bg-gradient-to-r from-[#152853] to-[#030409]' size="md">
+            <DialogHeader className='text-white flex gap-2 items-center'> <FaTrainSubway /> 交通方式說明</DialogHeader>
+            <DialogBody>
+              <Typography variant="h5" color='white' className='my-5'>高鐵 |</Typography>
+              <Typography variant="lead" color='white' className='my-5'>搭乘高鐵免費接駁車，至【自由友愛站】下車，並步行約5分鐘至嘉義市影視音基地</Typography>
+              <Typography variant="h5" color='white' className='my-5'>火車 |</Typography>
+              <Typography variant="lead" color='white' className='my-5'>嘉義市火車站-前站或嘉義火車站後站(嘉義市轉運中心)下車， <br />搭乘公車綠色【中山幹線】至中興友愛路口下車，並步行約10分鐘至影視音基地</Typography>
+              <Typography variant="h5" color='white' className='my-5'>公車 |</Typography>
+              <Typography variant="lead" color='white' className='my-5'>綠線【中山幹線】至中興友愛路口站下車，並步行約15分鐘至嘉義市影視音基地</Typography>
+              <Typography variant="lead" color='white' className='my-5'>菊線【光林我嘉線】至自由友忠路口站下車，並步行約20分鐘至嘉義市影視音基地</Typography>
+            </DialogBody>
+            <DialogFooter>
+              <Button
+                variant="text"
+                color="red"
+                onClick={handleOpen}
+                className="mr-1 text-lg"
+              >
+                <span>關閉</span>
+              </Button>
+            </DialogFooter>
+          </Dialog>
+
+        </div>
       </div>
 
 
