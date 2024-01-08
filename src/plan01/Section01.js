@@ -15,7 +15,7 @@ import {
   DialogFooter,
  } from "@material-tailwind/react";
  import { FaFile,FaShareFromSquare,FaTrainSubway } from "react-icons/fa6";
- import Section02 from '../plan02/Section02';
+ import ImageModal from '../Components/ImageModal';
 function Section01() {
   const [open, setOpen] = React.useState(1);
   const [openD, setOpenD] = React.useState(false);
@@ -28,6 +28,19 @@ function Section01() {
   };
  
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage('');
+    setModalOpen(false);
+  };
   const qaitems=[
     {id:1,q:"課程真的全程免費嗎?",a:"是的，全程免費。課程若需要一個收費標準，價值將超過萬元!!因此誠摯邀請您把握可貴的機會!!<br/><br/>此外，入選者直接享有資金補助，以完善影視作品。"},
     {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。只需填寫五題就完成囉!<br/><br/> 報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.16(六) 以電子信件各別通知正式學員。"},
@@ -66,7 +79,7 @@ function Section01() {
   
   return (
     <div className='bg-gradient-to-r from-[#152853] to-[#030409] '>
-
+      <ImageModal isOpen={modalOpen} imageUrl={selectedImage} onClose={closeModal} />
       <div className='relative pt-[56%] -z-0 brightness-'>
         <ReactPlayer
           className=' absolute top-0 left-0 '
@@ -134,10 +147,15 @@ function Section01() {
           <div className={`${currentSection === 'p4' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >課程表與師資</div> 
           <div className={`${currentSection === 'p4' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
         </section>
+        <Typography variant="lead" color='white' className='my-10 '>
+        【入門班】 每周六 14:00-16:00  <br />
+        【進階班】 每周日 14:00-16:00  
+        </Typography>
+
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
         <div className='flex flex-col items-center   gap-5'>
-          <img src={process.env.PUBLIC_URL+'/images/t02.jpg'} alt="" className='max-w-full md:w-2/3' />
-          <img src={process.env.PUBLIC_URL+'/images/t01.jpg'} alt="" className='max-w-full md:w-2/3' />
+          <img src={process.env.PUBLIC_URL+'/images/t02.jpg'} alt="" className='max-w-full md:w-2/3' onClick={() => openModal(process.env.PUBLIC_URL+'/images/t02.jpg')}/>
+          <img src={process.env.PUBLIC_URL+'/images/t01.jpg'} alt="" className='max-w-full md:w-2/3' onClick={() => openModal(process.env.PUBLIC_URL+'/images/t01.jpg')}/>
 
         </div>
 
