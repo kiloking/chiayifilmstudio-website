@@ -30,7 +30,7 @@ function Section01() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   const qaitems=[
     {id:1,q:"課程真的全程免費嗎?",a:"是的，全程免費。課程若需要一個收費標準，價值將超過萬元!!因此誠摯邀請您把握可貴的機會!!<br/><br/>此外，入選者直接享有資金補助，以完善影視作品。"},
-    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。只需填寫五題就完成囉! 報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.16(六) 以電子信件各別通知正式學員。"},
+    {id:2,q:"請問只要填完Google報名表單，就算完成報名嗎?",a:"是的。只需填寫五題就完成囉!<br/><br/> 報名過程並沒有再第二次徵選或面試的安排，但填完 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 網路報名 </a> 表單仍需經過專業評審委員會進行評審，預計於2024.03.16(六) 以電子信件各別通知正式學員。"},
     {id:3,q:"「入門班」和「進階班」的差別?",a:"入門班: 將著重從「0」開始學習，從攝影的鏡頭語言、數位知識、田野調查、劇本創作、實務拍攝、後製操作等，循序漸進地誕生屬於自己的第一個作品。<br/><br/>進階班: 針對已具有基本故事內容與前、後期製作能力，課程強調在於如何讓作品更進一步被完善再到被看見、如何提案和行銷作品本身、及運用學習新興科技如VR(虛擬實境)或國際合製等。簡言之，只要您過去已經嘗試過拍攝並想更進一步完善作品，進階班較為合適。"},
     {id:4,q:"入門班，真的完全沒有基礎也可以報名嗎?",a:"是的。我們熱烈歡迎只要對影視具有熱情的民眾報名。透過系列課程將帶領您從入門一步步學習到實作，基礎的理論知識必然存在，但課程設計將更著重於實務。<br/><br/>人才培育計畫並不是一個培養會考試的補習班，而是一個期許能孵化出更多動人影視故事的場域。不用很厲害才可以開始，而是開始了才會變厲害!"},
     {id:5,q:"報名徵選有限制嗎，怎樣才能夠脫穎而出?",a:"只要符合報名資格即可。因此不論您是學生、社群小編、行銷企劃、影像工作者、演員、經營各行各業的店家想透過影像的方式增加曝光，或是活到老學到老的年長者等，只要對用影視說故事有熱情及想法，都歡迎報名!!<br/><br/>本計畫徵選透過 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform' rel='noreferrer' target='_blank' class='text-amber-400 hover:text-amber-200 '> 報名表單 </a>的各項問題進行審查，因此您的回答將是評審判斷的唯一依據，因此建議填寫完整，並盡可能完善加分項題目。"},
@@ -135,6 +135,12 @@ function Section01() {
           <div className={`${currentSection === 'p4' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
         </section>
         <Typography variant="lead" color='white' className='my-10 flex items-center gap-1'>詳見 <a target="_blank"  href={process.env.PUBLIC_URL+'/images/課表.pdf'} className='text-amber-400 hover:text-amber-200 flex items-center'> 【課表日期與內容師資】<FaFile /></a></Typography>
+        <div className='flex flex-col items-center   gap-5'>
+          <img src={process.env.PUBLIC_URL+'/images/t02.jpg'} alt="" className='max-w-full md:w-2/3' />
+          <img src={process.env.PUBLIC_URL+'/images/t01.jpg'} alt="" className='max-w-full md:w-2/3' />
+
+        </div>
+
 
         <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p5">
           <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
@@ -196,8 +202,9 @@ function Section01() {
           <Typography variant="lead" color='white' className='my-10'>嘉義市影視音基地 <br /> 地址:嘉義市西區北安路74-80號 (舊菸葉廠)</Typography>
           <Button onClick={handleOpenD} variant="gradient" color='blue'  className='my-5 flex items-center gap-2 cursor-pointer text-base '> <FaTrainSubway /> 交通方式說明</Button> 
           <div className='flex gap-2'>
-            <div className='border-[#42cafe]  w-1/2'>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <div className='border-[#42cafe]  w-1/2' id="map">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className='w-1/2 '>
               <img src={process.env.PUBLIC_URL+'/images/S__42647560.jpg'} alt="" className='w-full object-cover h-full'/>
