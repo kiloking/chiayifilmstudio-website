@@ -120,7 +120,7 @@ function Section01() {
         </Typography>
         <Typography variant="lead"  className='my-10 text-blue-200'>
           #【免費】完整系列課程 <br />
-          # 金馬導演領軍，全業界師資陣容 <br />
+          # 金獎導演領軍，全業界師資陣容 <br />
           # 選擇「入門」或「進階」小班教學 <br />
           # 報名入選者，直接享有資金補助
         </Typography>
