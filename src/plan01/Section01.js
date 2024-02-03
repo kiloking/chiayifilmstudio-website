@@ -1,6 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import ReactPlayer from 'react-player';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import "swiper/css/pagination";
 import { 
   Typography,
   List, 
@@ -14,7 +20,7 @@ import {
   DialogBody,
   DialogFooter,
  } from "@material-tailwind/react";
- import { FaFile,FaShareFromSquare,FaTrainSubway } from "react-icons/fa6";
+ import { FaFile,FaShareFromSquare,FaTrainSubway,FaPhone,FaEnvelope } from "react-icons/fa6";
  import ImageModal from '../Components/ImageModal';
 function Section01() {
   const [open, setOpen] = React.useState(1);
@@ -26,6 +32,14 @@ function Section01() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const imgs =[
+    {image:"p01.jpg"},
+    {image:"p02.jpg"},
+    {image:"p03.jpg"},
+    {image:"p04.jpg"},
+    {image:"p05.jpg"},
+    {image:"p06.jpg"},
+  ]
  
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
@@ -211,6 +225,21 @@ function Section01() {
             })
           }
         </div>
+        <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p10">
+          <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
+          <div className={`${currentSection === 'p8' ? '  from-yellow-200 to-white'   : 'from-white to-white' }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `} >服務內容與聯絡方式</div> 
+          <div className={`${currentSection === 'p8' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
+        </section>
+        <Typography variant="lead" color='white' className='my-10'>影視音基地，除培訓課程外，還提供下列服務給市民朋友們。</Typography>
+        <ul className="list-disc text-white text-lg ml-5">
+          <li className='my-5'>影視問題諮詢</li>
+          <li className='my-5'>剪輯軟體使用</li>
+          <li className='my-5'>攝影設備租借</li>
+          <li className='my-5'>場地空間使用</li>
+          <li className='my-5'>工作空間進駐</li>
+        </ul>
+        <Typography variant="lead" color='white' className='flex items-center gap-2'> <FaPhone /> 05-2322060</Typography>   
+        <Typography variant="lead" color='white' className='flex items-center gap-2'> <FaEnvelope /> <a href="mailto:chiayifilmstudio@gmail.com">chiayifilmstudio@gmail.com</a>  </Typography>   
 
         <div className='taffic pb-12' >
           <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p9">
@@ -226,7 +255,27 @@ function Section01() {
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw" width="100%" height="100%"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className='w-1/2 '>
-              <img src={process.env.PUBLIC_URL+'/images/S__42647560.jpg'} alt="" className='w-full object-cover h-full'/>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }} 
+              navigation
+              modules={[Navigation,Pagination]}
+              centeredSlides={true}
+              className='w-full'
+              >
+                {
+                  imgs.map((item,index)=>{
+                    return(
+                      <SwiperSlide><img src={process.env.PUBLIC_URL+'/images/'+ item.image} alt="" className='w-full' /></SwiperSlide>
+                    )
+                  })
+                }
+              </Swiper>
+
             </div>
           </div>
           
