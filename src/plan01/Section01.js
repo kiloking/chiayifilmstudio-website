@@ -132,6 +132,7 @@ function Section01() {
         
         </Typography>
         <img src={process.env.PUBLIC_URL+'/images/0318.jpg'} alt="" className='max-w-full md:w-2/3' onClick={() => openModal(process.env.PUBLIC_URL+'/images/0318.jpg')}/>
+        <Typography variant="lead" color='white' className='my-10'>評審名單:李建成 教授、史祖德 監製、王示衡 導演</Typography>
 
         <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p1">
           <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
