@@ -127,9 +127,11 @@ function Section01() {
           <div className={`${currentSection === 'p1' ? ' opacity-100' : ' opacity-0 '} absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}><img src={process.env.PUBLIC_URL+'/images/bg-light.png'} alt="" /></div>
         </section>
         <Typography variant="lead" color='white' className='my-10'>
-          Coming soon <br /> <br />
-          暫定3/19(二)前公告，請各位報名者再留意信件 <br /> <br />
+        恭喜入選學員!! <br /> <br />
+        再麻煩留意信件與來電 <br /> <br />
+        
         </Typography>
+        <img src={process.env.PUBLIC_URL+'/images/0318.jpg'} alt="" className='max-w-full md:w-2/3' onClick={() => openModal(process.env.PUBLIC_URL+'/images/0318.jpg')}/>
 
         <section className='flex  items-center gap-5 mt-20 relative z-0'  id="p1">
           <img src={process.env.PUBLIC_URL+'/images/ball.png'} alt="" className='w-12' />
