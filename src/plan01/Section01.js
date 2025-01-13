@@ -291,7 +291,7 @@ function Section01() {
         >
           一律採
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeIdckF7cLWD9b_eYKr610llxEREG97wTVUs5TNg4vxWrIuBw/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfnCsnqsf6W0QS_opIohfVka7A_Wzcgf1eKDQOZ6yMVy9CXVA/viewform?usp=header"
             target="_blank"
             className="text-amber-400 hover:text-amber-200 flex items-center gap-1"
           >
@@ -358,7 +358,7 @@ function Section01() {
               clickable: true,
             }}
             autoplay={{
-              delay: 2000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             navigation

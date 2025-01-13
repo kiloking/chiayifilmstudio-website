@@ -9,7 +9,7 @@ function Header() {
     <div className=" relative  ">
       <div className=" w-full md:fixed top-0  left-0  z-10 bg-gradient-to-r from-[#1a2f66] to-[#57617c] px-10 py-2 flex md:items-center justify-between  md:flex-row ">
         <div className="text-lg my-4 md:my-0  md:text-lg tracking-wide font-semibold text-white ">
-          嘉義市影視音基地
+          嘉義市影視人才培育學院
         </div>
         <div className="flex gap-4 items-center ">
           <div className="flex h-1/2 ">
