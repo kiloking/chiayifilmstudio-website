@@ -385,9 +385,6 @@ function Section01() {
               url="https://www.youtube.com/watch?v=Ws1J7Hblib0"
               width="100%"
               height="100%"
-              loop
-              muted={true}
-              playing
               config={{
                 youtube: {
                   playerVars: { modestbranding: 1 },
@@ -401,9 +398,6 @@ function Section01() {
               url="https://www.youtube.com/watch?v=mTBuib_3dhM"
               width="100%"
               height="100%"
-              loop
-              muted={true}
-              playing
               config={{
                 youtube: {
                   playerVars: { modestbranding: 1 },
