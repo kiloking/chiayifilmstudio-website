@@ -4,9 +4,6 @@
   "private": true,
   "dependencies": {
     "@material-tailwind/react": "^2.1.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
@@ -21,13 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
