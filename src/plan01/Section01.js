@@ -56,7 +56,7 @@ function Section01() {
   const v2imgs = [
     { image: "v2_01.jpg" },
     { image: "v2_02.jpg" },
-    { image: "v2_03.png" },
+    { image: "v2_03.jpg" },
   ];
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -341,7 +341,7 @@ function Section01() {
           詳見{" "}
           <a
             target="_blank"
-            href={process.env.PUBLIC_URL + "/images/課表.pdf"}
+            href={"https://web.forestdev.work/chiayi/課程規劃v2.pdf"}
             className="text-amber-400 hover:text-amber-200 flex items-center"
           >
             {" "}
@@ -365,6 +365,9 @@ function Section01() {
             modules={[Navigation, Pagination, Autoplay]}
             centeredSlides={true}
             className="w-full"
+            style={{
+              "--swiper-navigation-size": "25px",
+            }}
           >
             {v2imgs.map((item, index) => {
               return (
@@ -373,6 +376,11 @@ function Section01() {
                     src={"https://web.forestdev.work/chiayi/" + item.image}
                     alt=""
                     className="w-full"
+                    onClick={() =>
+                      openModal(
+                        "https://web.forestdev.work/chiayi/" + item.image
+                      )
+                    }
                   />
                 </SwiperSlide>
               );
@@ -618,8 +626,8 @@ function Section01() {
             {" "}
             <FaTrainSubway /> 交通方式說明
           </Button>
-          <div className="flex gap-2">
-            <div className="border-[#42cafe]  w-1/2" id="map">
+          <div className="flex flex-col md:flex-row gap-2 h-full">
+            <div className="border-[#42cafe]  w-full  md:w-1/2 " id="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14636.811042970876!2d120.4321935!3d23.4892052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97e447e8790d%3A0xeefdd10b33b77622!2z5ZiJ576p5biC5b2x6KaW6Z-z5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1702987975351!5m2!1szh-TW!2stw"
                 width="100%"
@@ -627,9 +635,10 @@ function Section01() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full aspect-[363/272] "
               ></iframe>
             </div>
-            <div className="w-1/2 ">
+            <div className="w-full md:w-1/2 h-full ">
               <Swiper
                 spaceBetween={30}
                 slidesPerView={1}
@@ -641,6 +650,9 @@ function Section01() {
                 modules={[Navigation, Pagination]}
                 centeredSlides={true}
                 className="w-full"
+                style={{
+                  "--swiper-navigation-size": "25px",
+                }}
               >
                 {imgs.map((item, index) => {
                   return (
@@ -701,6 +713,20 @@ function Section01() {
                 <span>關閉</span>
               </Button>
             </DialogFooter>
+          </Dialog>
+          <Dialog
+            size="xl"
+            open={modalOpen}
+            handler={closeModal}
+            className="bg-transparent shadow-none"
+          >
+            <DialogBody className="p-0">
+              <img
+                src={selectedImage}
+                alt="enlarged"
+                className="w-full object-contain max-h-[80vh]"
+              />
+            </DialogBody>
           </Dialog>
         </div>
       </div>
