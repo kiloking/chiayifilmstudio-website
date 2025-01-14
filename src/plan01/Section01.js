@@ -587,8 +587,7 @@ function Section01() {
             </div>
           </section>
           <Typography variant="lead" color="white" className="my-10">
-            嘉義市影視人才培育學院(嘉義市影視音基地)
-            <br /> 地址:嘉義市西區北安路74-80號 (舊菸葉廠)
+            <br /> 地址:嘉義市西區北安路74-80號
           </Typography>
 
           <Typography
