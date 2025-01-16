@@ -27,3 +27,7 @@ yarn-debug.log*
 yarn-error.log*
 testapi.http
 test.js
+
+#mac
+.DS_Store
+._*
