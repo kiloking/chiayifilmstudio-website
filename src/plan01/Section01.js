@@ -56,7 +56,7 @@ function Section01() {
   const v2imgs = [
     { image: "v2_01.jpg" },
     { image: "v2_02.jpg" },
-    { image: "v2_03.jpg" },
+    { image: "v3_03.jpg" },
   ];
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -341,7 +341,7 @@ function Section01() {
           詳見{" "}
           <a
             target="_blank"
-            href={"https://web.forestdev.work/chiayi/課程規劃v2.pdf"}
+            href={"https://web.forestdev.work/chiayi/課程規劃Fianl0117.pdf"}
             className="text-amber-400 hover:text-amber-200 flex items-center"
           >
             {" "}
