@@ -182,6 +182,40 @@ function Section01() {
         <Typography variant="h1" className="text-center my-16 text-[#dfe103] ">
           <img src={process.env.PUBLIC_URL + "/images/title-1.png"} alt="" />
         </Typography>
+        <section
+          className="flex  items-center gap-5 mt-20 relative z-0"
+          id="p10"
+        >
+          <img
+            src={process.env.PUBLIC_URL + "/images/ball.png"}
+            alt=""
+            className="w-12"
+          />
+          <div
+            className={`${
+              currentSection === "p10"
+                ? "  from-yellow-200 to-white"
+                : "from-white to-white"
+            }  bg-clip-text  bg-gradient-to-l text-transparent text-3xl font-semibold tracking-wider  transition-all duration-500  `}
+          >
+            錄取名單
+          </div>
+          <div
+            className={`${
+              currentSection === "p10" ? " opacity-100" : " opacity-0 "
+            } absolute -top-5 left-10 w-[300px] -z-10 transition-opacity duration-500 delay-100  `}
+          >
+            <img src={process.env.PUBLIC_URL + "/images/bg-light.png"} alt="" />
+          </div>
+        </section>
+        <div className="flex flex-col items-center   gap-5 my-[10%]">
+          <div className="w-full">
+            <img src={"https://web.forestdev.work/chiayi/0223_1.png"} alt="" />
+          </div>
+          <div className="w-full">
+            <img src={"https://web.forestdev.work/chiayi/0223_2.png"} alt="" />
+          </div>
+        </div>
 
         <section
           className="flex  items-center gap-5 mt-20 relative z-0"
