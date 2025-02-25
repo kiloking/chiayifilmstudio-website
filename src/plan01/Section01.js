@@ -375,7 +375,7 @@ function Section01() {
           詳見{" "}
           <a
             target="_blank"
-            href={"https://web.forestdev.work/chiayi/課程規劃Fianl0117.pdf"}
+            href={"https://web.forestdev.work/chiayi/0225.pdf"}
             className="text-amber-400 hover:text-amber-200 flex items-center"
           >
             {" "}
